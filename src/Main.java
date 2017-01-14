@@ -3,9 +3,9 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
-		try (Scanner sc = new Scanner(System.in)) {
-			System.out.println("Enter url to be crawled : ");
 
+		System.out.println("Enter url to be crawled : ");
+		try (Scanner sc = new Scanner(System.in)) {
 			Crawler crawler = new Crawler();
 			String url = null;
 			while (!(url = sc.nextLine()).equals("exit")) {
@@ -14,9 +14,5 @@ public class Main {
 				crawler.crawl(url);
 			}
 		}
-	}
-
-	private static void test() {
-
 	}
 }

@@ -10,7 +10,6 @@ import java.util.Map.Entry;
 import java.util.Queue;
 
 import org.jsoup.Jsoup;
-import org.jsoup.UnsupportedMimeTypeException;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
@@ -95,8 +94,8 @@ public class Crawler {
 		if (!result.containsKey(url)) {
 			Document doc = null;
 			try {
-				doc = Jsoup.connect(url).get();
-			} catch (UnsupportedMimeTypeException umte) {
+				doc = Jsoup.connect(url).followRedirects(true).get();
+			} catch (Exception ex) {
 				// nothing to handle. just a bad url. we can safely ignore.
 				return;
 			}
