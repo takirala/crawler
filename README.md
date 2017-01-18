@@ -38,13 +38,3 @@ java 8 has to be installed. That's all.
 	java -cp Crawler-0.1.0-jar-with-dependencies.jar Test
 
 * You can add more test cases in Test.java (You have to use maven to rebuild the bundle)
-
-## Notes
-
-* I have ran this code on gocardless.com and I observed that there are 3842 unique urls parsed. 
-* Interestingly, there is only one http url under this domain. All other are https.
-* I have attached the sample output as **output.json** for your reference.
-
-I have very much enjoyed coding up this assignment. I have taken ~3.5 Hours to work on this. If taken more time, there would definitely be lot of areas for improvement (concurrent connections, optimal path wise parsing, multi threaded processing for result data set etc..). Although the code solves the very specific purpose, I have kept the modules fairly flexible. 
-
-I would be happy to receive any sort of feedback on this. If you face any problems running the code or if you want to discuss the code, I am available at takirala@ufl.edu / tarugupta.92@gmail.com / skype:tarun.gupta.akirala

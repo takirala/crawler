@@ -10,7 +10,7 @@ public class Main {
 			String url = null;
 			while (!(url = sc.nextLine()).equals("exit")) {
 				if (url.isEmpty())
-					url = "https://www.gocardless.com/";
+					url = "https://www.google.com/";
 				crawler.crawl(url);
 			}
 		}
